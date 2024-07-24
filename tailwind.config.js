@@ -21,9 +21,12 @@ export default {
       colors:{
           primary: '#9E0B26',
           secondary: '#C9C4C0',
+          'black-40': 'rgba(0, 0, 0, 0.6)', // Color negro con opacidad al 40%
+
       },
       backgroundImage: {
           'concrete-50': "url('/src/assets/images/bg/concrete-50.png')",
+          'manto': "url('/src/assets/images/bg/fondo_manto.png')",
       },
     
   },

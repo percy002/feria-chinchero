@@ -1,3 +1,5 @@
+import { useScrollTop } from "../../hooks/useScrollTop"
+
 
 import Camelidos from "../../assets/images/camelidos/Camelidos.jpeg";
 import logo_camelidos_2 from "../../assets/images/camelidos/logo_camelidos_2.webp";
@@ -8,6 +10,8 @@ import galeri4 from "../../assets/images/camelidos/galeria/galeri4.jpg";
 import galeria3 from "../../assets/images/camelidos/galeria/galeria3.jpeg";
 
 const Nosotros = () => {
+    useScrollTop();
+
     return (
         
             <div className="">

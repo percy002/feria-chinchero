@@ -1,3 +1,5 @@
+import { Link, useLocation } from "react-router-dom";
+
 import { FaFacebook } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
@@ -16,9 +18,12 @@ const Footer = () => {
         <div className="flex-1 flex flex-col">
           <h4 className="text-center text-white">Mas Información</h4>
           <ul className="flex flex-col text-white font-bold items-center gap-y-5">
-            <li><a href="">REGLAMENTO</a></li>
-            <li><a href="">PROGRAMA</a></li>
-            <li><a href="">RESOLUCIÓN</a></li>
+            <li>
+              <Link to="/nosotros">NOSOTROS</Link>
+            </li>
+            <li>
+              <Link to="/programa">PROGRAMA</Link>
+            </li>
           </ul>
         </div>
         <div className="flex-1 flex flex-col">

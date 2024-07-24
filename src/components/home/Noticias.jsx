@@ -16,7 +16,7 @@ const Noticias = () => {
                 <img src={noticias1} alt="" />
               </div>
               <div className="contenido">
-                <h4 className="text-pretty">Lanzamiento de la Feria Internacional de Camelidos, Cusco 2024 </h4>
+                <h4 className="text-pretty">Titulo 1</h4>
                 <p>
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Provident porro fugit distinctio dolore culpa rem sint est
