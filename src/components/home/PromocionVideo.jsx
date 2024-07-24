@@ -1,4 +1,4 @@
-import videoCamelidos from "../../assets/videos/feria-camelidos.mp4";
+import videoChinchero from "../../assets/videos/video_chinchero.mp4";
 import logoFeriaChinchero from "../../assets/images/logos/logo_feria_regional_cuadrado.png";
 
 const PromocionVideo = () => {
@@ -8,7 +8,7 @@ const PromocionVideo = () => {
         <div className="flex-1">
           <div className="flex justify-center">
             <video
-              src={videoCamelidos}
+              src={videoChinchero}
               className="w-full mx-auto aspect-video"
               controls
               poster={logoFeriaChinchero}

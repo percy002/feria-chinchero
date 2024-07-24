@@ -1,180 +1,68 @@
-import { useScrollTop } from "../../hooks/useScrollTop"
-
-
-import Camelidos from "../../assets/images/camelidos/Camelidos.jpeg";
-import logo_camelidos_2 from "../../assets/images/camelidos/logo_camelidos_2.webp";
-import año_camelidos from "../../assets/images/camelidos/año_camelidos.jpg";
-import hagamos_historia_rojo from "../../assets/images/logos/hagamos_historia_rojo.png";
 import galeria1 from "../../assets/images/camelidos/galeria/galeria1.jpg";
-import galeri4 from "../../assets/images/camelidos/galeria/galeri4.jpg";
+import galeria2 from "../../assets/images/camelidos/galeria/galeria2.jpeg";
 import galeria3 from "../../assets/images/camelidos/galeria/galeria3.jpeg";
+import Header from "../UI/Header";
+import logoFeriaChinchero from "../../assets/images/logos/logo_feria_regional_cuadrado.png";
 
 const Nosotros = () => {
-    useScrollTop();
-
-    return (
-        
-            <div className="">
-                <section className="container mx-auto ">
-                    <div className="flex flex-col lg:flex-row sm:items-center">
-                        <div className="flex-1">
-                            <img
-                                src={Camelidos}
-                                alt="promocion Expo Cusco Huancaro 2024"
-                                className="object-cover w-full p-20"
-                               
-                            />
-                        </div>
-                        <div className="flex-1">
-                            <h1 className="text-primary text-center">
-                                Festicamelidos 2024
-                            </h1>
-                            <p className="text-justify text-lg px-2 sm:px-5">
-                            Bienvenidos al Festival de Camélidos de Cusco, 
-                            un evento anual que celebra la rica tradición y 
-                            cultura relacionada con los camélidos en nuestra 
-                            región. Desde su inicio, nuestro festival ha sido 
-                            un punto de encuentro para amantes de los animales, 
-                            agricultores, artesanos y todos aquellos interesados 
-                            en las prácticas culturales y agrícolas ancestrales.
-                            Estamos comprometidos con la sostenibilidad y el bienestar 
-                            de los camélidos, promoviendo prácticas de cría responsables 
-                            y el respeto por estos animales. Además, trabajamos en 
-                            colaboración con organizaciones locales para asegurar 
-                            que el festival tenga un impacto positivo en la 
-                            comunidad, fomentando el desarrollo económico y cultural.
-                            </p>
-                        </div>
-                        
-                    </div>
-                    
-                </section>
-                <section className="py-10 bg-concrete-50 text-lg ">
-                    <div className="w-[85%] mx-auto flex flex-col-reverse md:flex-row px-5 gap-x-5 md:items-center">
-                        <div className="flex-1 flex flex-col">
-                            <h3 className="text-primary">Mision</h3>
-                            <p className="text-justify text-gray-700">
-                            En el Festival de Camélidos, nuestra misión es 
-                            preservar y promover las tradiciones y conocimientos 
-                            relacionados con los camélidos, animales que han sido 
-                            fundamentales para la vida y la economía de nuestra 
-                            región durante siglos. Nos esforzamos por educar al 
-                            público sobre la importancia de estos animales en nuestra 
-                            historia y cultura, y al mismo tiempo, ofrecer una plataforma 
-                            para el intercambio cultural y comercial.
-                            </p>
-                            
-                            
-                        </div>
-                        <div className="flex-1">
-                            <div className="flex justify-center">
-                                <img
-                                    src={logo_camelidos_2}
-                                    alt=""
-                                    className="object-cover w-[50vh] h-auto"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section className="py-10 bg-concrete-50 text-lg ">
-                    <div className="w-[85%] mx-auto flex flex-col-reverse md:flex-row px-5 gap-x-5 md:items-center">
-                        <div className="flex-1">
-                            <div className="flex justify-center">
-                                <img
-                                    src={año_camelidos}
-                                    alt=""
-                                    className="object-cover w-[50vh] h-auto"
-                                />
-                            </div>
-                        </div>
-                        <div className="flex-1 flex flex-col">
-                            <h3 className="text-primary">Vision</h3>
-                            <p className="text-justify text-gray-700">
-                            Nuestra visión es convertir el Festival de Camélidos 
-                            de Cusco en un referente cultural y turístico a nivel 
-                            nacional e internacional, promoviendo y preservando 
-                            la rica herencia cultural y económica asociada 
-                            con los camélidos andinos. Aspiramos a crear 
-                            un espacio inclusivo y educativo donde se celebren 
-                            y se destaquen las tradiciones ancestrales, la innovación 
-                            en el manejo y aprovechamiento de estos animales, y su 
-                            importancia en la sostenibilidad ambiental y el desarrollo rural.
-                            </p>
-                        </div>
-                        
-                    </div>
-                </section>
-                <section className="w-full container mx-auto mt-8">
-                    <div className="w-full flex justify-center">
-                        <div className="flex justify-center gap-2 md:gap-10 w-full md:w-4/6">
-                            
-                            <div className="flex-1">
-                                <img
-                                    src={hagamos_historia_rojo}
-                                    alt="Logo hagamos historia Gobierno Regional del Cusco"
-                                    className="w-full"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <h2 className="text-center text-primary">
-                            Galeria de fotos 
-                        </h2>
-                       {/*  <div className="flex flex-col md:flex-row gap-8">
-                            <div className="flex-1">
-                                <img
-                                    src="/images/gallery/imagen_feria_1.webp"
-                                    alt="Galeria de fotos 2023"
-                                    className=""
-                                />
-                            </div>
-                            <div className="flex-1">
-                                <img
-                                    src="/images/gallery/imagen_feria_2.webp"
-                                    alt="Galeria de fotos 2023"
-                                    className=""
-                                />
-                            </div>
-                            <div className="flex-1">
-                                <img
-                                    src="/images/gallery/imagen_feria_3.webp"
-                                    alt="Galeria de fotos 2023"
-                                    className=""
-                                />
-                            </div>
-                            
-                        </div> */}
-                        <div className="flex flex-col md:flex-row gap-8 mt-8">
-                            <div className="flex-1">
-                                <img
-                                    src={galeria1}
-                                    alt="Galeria de fotos 2023"
-                                    className=""
-                                />
-                            </div>
-                            <div className="flex-1">
-                                <img
-                                    src={galeri4}
-                                    alt="Galeria de fotos 2023"
-                                    className=""
-                                />
-                            </div>
-                            <div className="flex-1">
-                                <img
-                                    src={galeria3}
-                                    alt="Galeria de fotos 2023"
-                                    className=""
-                                />
-                            </div>
-                            
-                        </div>
-                    </div>
-                </section>
-                {/*<MunisLogos />*/}
+  return (
+    <div className="">
+      <Header
+        titleHeader={"Acerca de Nosotros"}
+        contentHeader={"Conoce mejor nuestra historia."}
+      />
+      <section className="px-4 md:px-12 py-4">
+        <div className="flex flex-col lg:flex-row gap-y-4">
+          <div className="flex-1 flex justify-center items-center">
+            <div className="text-primary ">
+              <h3 className="text-center leading-none mb-0">Feria Regional</h3>
+              <p className="text-center font-bold text-base leading-5">
+                CHINCHERO
+              </p>
+              <p className="text-center font-bold text-base leading-5">2024</p>
+              <p className="text-gray-700 text-pretty text-xl py-4">
+                La XX FERIA REGIONAL Y XXXV FERIA AGROPECUARIA AGROINDUSTRIAL,
+                ARTESANAL Y CULTURAL - CHINCHERO 2024, tiene como objetivo de
+                contribuir, promocionar articular la comercialización de la
+                producción ligados a los ejes temáticos en ganadería,
+                agricultura, agroindustria, artesanía, gastronomía, tecnológica,
+                industria y cultural a nivel regional con proyección nacional e
+                internacional; generan mucha información en poco tiempo siendo
+                una excelente manera de tomar el pulso al mercado, de conocer
+                tendencias actuales y futuras. Fomentando el intercambio
+                tecnológico, las transacciones comerciales y el establecimiento
+                de redes entre productores, distribuidores, consumidores y entre
+                sus participantes bajo la dirección del comité organizador.
+              </p>
             </div>
-
-    );
+          </div>
+          <div className="flex-1 flex justify-center">
+            <div className="flex justify-center w-8/12">
+              <img
+                src={logoFeriaChinchero}
+                alt=""
+                className="object-contain w-full h-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* galeria de fotos */}
+      <section className="px-4 md:px-12 py-4">
+        <h3 className="text-center text-primary">Galería de Fotos</h3>
+        <div className="flex flex-wrap">
+          <div className="w-full md:w-1/2 lg:w-1/3 p-2">
+            <img src={galeria1} alt="" className="w-full h-auto" />
+          </div>
+          <div className="w-full md:w-1/2 lg:w-1/3 p-2">
+            <img src={galeria2} alt="" className="w-full h-auto" />
+          </div>
+          <div className="w-full md:w-1/2 lg:w-1/3 p-2">
+            <img src={galeria3} alt="" className="w-full h-auto" />
+          </div>
+        </div>
+      </section>
+    </div>
+  );
 };
 export default Nosotros;

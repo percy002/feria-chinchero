@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 
 const useScreenSize = () => {
-  // Define el estado inicial basado en el tamaño de la ventana actual
   const [isLarge, setIsLarge] = useState(window.innerWidth > 768);
 
   useEffect(() => {
@@ -10,7 +9,6 @@ const useScreenSize = () => {
 	  setIsLarge(window.innerWidth > 768);
 	};
 
-	// Añade el event listener
 	window.addEventListener('resize', handleResize);
 
 	// Limpieza al desmontar el componente

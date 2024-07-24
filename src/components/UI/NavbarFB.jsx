@@ -29,8 +29,6 @@ const customNavbar = {
 function NavbarFB() {
   const isScreenLarge = useScreenSize();
 
-  const [isMobile, setIsMobile] = useState(window.innerWidth > 768);
-
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
@@ -51,17 +49,6 @@ function NavbarFB() {
     };
   }, []);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth > 768);
-    };
-  
-    window.addEventListener('resize', handleResize);
-  
-    // Limpieza al desmontar
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
   return (
     <Navbar
       hidden={isActive("/") && isScreenLarge}
@@ -69,7 +56,7 @@ function NavbarFB() {
       fluid
       className={`bg-black-40 text-white md:bg-black-40 ${!isActive('/') && "md:bg-primary"} z-100 xl:px-16 fixed z-50 w-full md:py-2 h-fit ${
         scrolled ? "md:bg-primary text-white" : "md:text-white"
-      } lg:hidden`}
+      }`}
     >
       <Navbar.Brand as={Link} href="/">
         <img
@@ -119,8 +106,19 @@ function NavbarFB() {
           </div>
 
           <div className={`font-bold md:text-lg flex justify-center`}>
-            <Map />
+            <Link
+              to="/ubicacion"
+              className={`px-2 ${
+                isActive("/ubicacion") ? "border-b-4 " : "hover:border-b-4 "
+              } ${scrolled ? "border-white" : "md:border-white"}`}
+            >
+              UBICACIÓN
+            </Link>
           </div>
+
+          {/* <div className={`font-bold md:text-lg flex justify-center`}>
+            <Map />
+          </div> */}
         </>
       </Navbar.Collapse>
     </Navbar>
