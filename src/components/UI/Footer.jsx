@@ -26,6 +26,12 @@ const Footer = () => {
               <li>
                 <Link to="/programa">PROGRAMA</Link>
               </li>
+              <li>
+                <Link to="/reglamento">REGLAMENTO</Link>
+              </li>
+              <li>
+                <a href="http://registroferiachinchero.actividadescusco.com/">REGISTRATE</a>
+              </li>
             </ul>
           </div>
           <div className="flex-1 flex flex-col">

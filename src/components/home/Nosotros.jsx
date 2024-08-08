@@ -1,6 +1,6 @@
-import galeria1 from "../../assets/images/camelidos/galeria/galeria1.jpg";
-import galeria2 from "../../assets/images/camelidos/galeria/galeria2.jpeg";
-import galeria3 from "../../assets/images/camelidos/galeria/galeria3.jpeg";
+import galeria1 from "../../assets/images/noticias/carreraburros.jpg";
+import galeria2 from "../../assets/images/noticias/PlatoTipico.jpg";
+import galeria3 from "../../assets/images/noticias/CorridaToros.webp";
 import Header from "../UI/Header";
 import logoFeriaChinchero from "../../assets/images/logos/logo_feria_regional_cuadrado.png";
 

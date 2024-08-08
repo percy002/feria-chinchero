@@ -22,6 +22,7 @@ import LogoCajaCusco from "../../assets/images/logos/logoCajaCusco.png";
 import logoAndes from "../../assets/images/logos/logoLosAndes.png";
 import logoConsorcio from "../../assets/images/logos/consorcio.jpg";
 import logoApdayc from "../../assets/images/logos/logoApdayc.png";
+import logoGerepro from "../../assets/images/logos/gerepro.png";
 
 const Participantes = () => {
   return (
@@ -56,7 +57,7 @@ const Participantes = () => {
               <img src={gercetur} alt="" className="w-full" />
             </div>
           </div>
-          <div className="flex justify-around gap-1 sm:gap-8 w-full sm:w-5/6 mx-auto">
+          <div className="flex justify-around gap-1 lg:gap-8 w-full sm:w-5/6 mx-auto">
             <div className=" flex items-center justify-center">
               <img src={logoGuamanPoma} alt="" className="w-1/2" />
             </div>
@@ -69,6 +70,10 @@ const Participantes = () => {
 
             <div className=" flex items-center justify-center">
               <img src={logoApdayc} alt="" className="w-1/2" />
+            </div>
+            
+            <div className=" flex items-center justify-center">
+              <img src={logoGerepro} alt="" height={280} width={280} />
             </div>
           </div>
           <div className="flex justify-center">

@@ -93,6 +93,7 @@ function NavbarFB() {
               NOSOTROS
             </Link>
           </div>
+          
 
           <div className={`font-bold md:text-lg flex justify-center`}>
             <Link
@@ -102,6 +103,16 @@ function NavbarFB() {
               } ${scrolled ? "border-white" : "md:border-white"}`}
             >
               PROGRAMA
+            </Link>
+          </div>
+          <div className={`font-bold md:text-lg flex justify-center`}>
+            <Link
+              to="/reglamento"
+              className={`px-2 ${
+                isActive("/reglamento") ? "border-b-4 " : "hover:border-b-4 "
+              } ${scrolled ? "border-white" : "md:border-white"}`}
+            >
+              REGLAMENTO
             </Link>
           </div>
 
@@ -115,6 +126,11 @@ function NavbarFB() {
               UBICACIÓN
             </Link>
           </div>
+          <li class="sm:ml-auto flex-1 flex justify-center">
+                    <a href="http://registroferiachinchero.actividadescusco.com/" class="block sm:w-auto bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                      REGISTRATE
+                    </a>
+          </li>
 
           {/* <div className={`font-bold md:text-lg flex justify-center`}>
             <Map />

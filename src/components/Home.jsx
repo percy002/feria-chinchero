@@ -72,7 +72,17 @@ const Home = () => {
 
                   </li>
                   <li>
+                    {/* <a href="/programa">PROGRAMA</a> */}
+                    <Link to="/reglamento">REGLAMENTO</Link>
+
+                  </li>
+                  <li>
                     <Link to="/ubicacion">UBICACION</Link>
+                  </li>
+                  <li class="sm:ml-auto">
+                    <a href="http://registroferiachinchero.actividadescusco.com/" class="block sm:w-auto bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                      REGISTRATE
+                    </a>
                   </li>
                 </ul>
               </div>

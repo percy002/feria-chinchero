@@ -15,7 +15,7 @@ const CarouselCustomTheme = {
 function CarouselMain() {
   return (
     <div className="h-40 sm:h-64 xl:h-[80vh] relative">
-      <Carousel slideInterval={4000} theme={CarouselCustomTheme}>
+      <Carousel slideInterval={3000} theme={CarouselCustomTheme}>
         <img src={carrucel1} alt="imagen feria de huancaro" className="object-cover h-full"/>
         <img src={carrucel2} alt="imagen feria de huancaro" className="object-cover h-full"/>
         <img src={carrucel3} alt="imagen feria de huancaro" className="object-cover h-full"/>
