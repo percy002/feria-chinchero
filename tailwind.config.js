@@ -21,6 +21,7 @@ export default {
       colors:{
           primary: '#9E0B26',
           secondary: '#C9C4C0',
+          'black-80': 'rgba(0, 0, 0, 0.8)', // Color negro con opacidad al 40%
           'black-40': 'rgba(0, 0, 0, 0.6)', // Color negro con opacidad al 40%
           "black-25": 'rgba(0, 0, 0, 0.25)',
 
@@ -30,7 +31,7 @@ export default {
           'concrete-50': "url('/src/assets/images/bg/concrete-50.png')",
           'manto': "url('/src/assets/images/bg/fondo_manto.png')",
           'textura': "url('/src/assets/images/bg/textura.png')",
-          'fondo-mapi': "url('/src/assets/images/bg/fondo-mapi.png')",
+          'fondo-limatambo': "url('/src/assets/images/bg/bg-fondo-limatambo.png')",
 
       },
     

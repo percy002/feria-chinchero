@@ -23,15 +23,13 @@ const Footer = () => {
               <li>
                 <Link to="/nosotros">NOSOTROS</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/programa">PROGRAMA</Link>
-              </li>
+              </li> */}
               <li>
                 <Link to="/reglamento">REGLAMENTO</Link>
               </li>
-              <li>
-                <a href="http://registroferiachinchero.actividadescusco.com/">REGISTRATE</a>
-              </li>
+              
             </ul>
           </div>
           <div className="flex-1 flex flex-col">
@@ -40,7 +38,7 @@ const Footer = () => {
               <li>
                 <a
                   target="_blank"
-                  href="https://www.facebook.com/story.php?story_fbid=1069320974741247&id=100049900642112&mibextid=oFDknk&rdid=orCuHZkV9R5WfzYq"
+                  href="https://www.facebook.com/munilimatambo2326"
                 >
                   <FaFacebook />
                 </a>

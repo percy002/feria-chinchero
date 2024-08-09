@@ -1,33 +1,34 @@
-import logoFeriaChinchero from "../../assets/images/logos/logo_feria_regional_cuadrado.png";
+import logoFeria from "../../assets/images/logos/logo_feria.png";
 
 const Resena = () => {
   return (
-    <section className="py-5 bg-concrete-50 text-xl ">
+    <section className="py-5 bg-concrete-50 text-xs sm:text-base ">
       <div className="w-[85%] mx-auto flex flex-col-reverse lg:flex-row px-5 gap-x-5 lg:items-center">
         <div className="flex-1 flex flex-col">
-          <h2 className="text-primary">Reseña</h2>
+          <h2 className="text-primary">Acerca de la Feria</h2>
           <p className="text-justify text-gray-700">
-            La XX FERIA REGIONAL Y XXXV FERIA AGROPECUARIA AGROINDUSTRIAL,
-            ARTESANAL Y CULTURAL - CHINCHERO 2024, tiene como objetivo de
-            contribuir, promocionar articular la comercialización de la
-            producción ligados a los ejes temáticos en ganadería, agricultura,
-            agroindustria, artesanía, gastronomía, tecnológica, industria y
-            cultural a nivel regional con proyección nacional e internacional;
-            generan mucha información en poco tiempo siendo una excelente manera
-            de tomar el pulso al mercado, de conocer tendencias actuales y
-            futuras. Fomentando el intercambio tecnológico, las transacciones
-            comerciales y el establecimiento de redes entre productores,
-            distribuidores, consumidores y entre sus participantes bajo la
-            dirección del comité organizador.
+            La Municipalidad Distrital de Limatambo, comunidades campesinas del
+            Distrito, Anexos, Asociaciones de criadores del Distrito y el Comité
+            Organizador. de la “II EXPO FERIA REGIONAL AGROPECUARIO,
+            AGROINDUSTRIAL ARTESANAL, GASTRONOMICA Y TURISTICA LIMATAMBO 2024.”,
+            se complacen en invitar al público en general a visitar y presenciar
+            la exposición y venta de lo mejor de la producción y crianza de
+            animales menores y mayores, misma que se hace en conmemoración del
+            aniversario y la fiesta patronal de nuestro distrito de Limatambo.
+            Estamos seguros de contar con la presencia de los mejores
+            productores de nuestro Distrito, Provincia y Región del Cusco,
+            siendo parte de cada de una de las actividades programadas de este
+            magno evento agropecuario, como es la exposición y juzgamiento de
+            animales mayores y menores, remate al martillo, exposición y venta
+            de artesanías, derivados lácteos, concurso de producción y ordeño de
+            leche, concurso y venta de platos típicos, presentaciones
+            artísticas, etc.
           </p>
-          {/* <Link href="/informacion_general" className="bg-primary rounded-full text-white w-fit mt-4 px-4 py-1 border-4 hover:border-primary hover:bg-white hover:text-primary">
-                            Leer Mas
-                        </Link> */}
         </div>
         <div className="flex-1 flex justify-center">
           <div className="flex justify-center w-11/12">
             <img
-              src={logoFeriaChinchero}
+              src={logoFeria}
               alt=""
               className="object-cover w-full h-auto"
             />

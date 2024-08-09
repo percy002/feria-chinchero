@@ -13,7 +13,6 @@ const Reglamento = () => {
         <div className="my-12 absolute w-full h-[85vh] ">
           <iframe
             src={reglamento}
-            frameborder="0"
             className="border-0 w-4/5 h-full mx-auto"
           ></iframe>
         </div>

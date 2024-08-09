@@ -1,49 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery.css');
+@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-zoom.css');
+@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-share.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
+:root{
+    --rojo:#9E0C26;
+    --sangre:#C20831;
+    --plomo:rgb(55 65 81 / var(--tw-text-opacity));;
+}
 @font-face{
     font-family: 'Midnight';
     src: url('assets/fonts/Midnight_Drive.otf');
 }
+h1,h2,h3,h4,h5{
+    color: var(--rojo);
+    font-weight: bold;
+    line-height: 1;
+}
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    font-weight: bold;
+    text-align: center;
 }
 
 h2 {
-    font-size: 2.2rem;
+    font-size: 1.9rem;
     margin-top: 0.9rem;
     margin-bottom: 0.9rem;
-    font-weight: bold;
+    text-align: center;
 }
 
 h3 {
-    font-size: 1.9rem;
+    font-size: 1.6rem;
     margin-top: 0.8rem;
     margin-bottom: 0.8rem;
-    font-weight: bold;
     flex-grow: 1;
 }
 
 h4 {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     margin-top: 0.7rem;
     margin-bottom: 0.7rem;
-    font-weight: bold;
 }
 
 h5 {
-    font-size: 1.3rem;
+    font-size: 1rem;
     margin-top: 0.6rem;
     margin-bottom: 0.6rem;
-    font-weight: bold;
 }
 .button_padding_cero span{
     padding: 0.2rem;
@@ -85,11 +95,7 @@ h5 {
 
 /* css para pagina principal Elvis */
 
-:root{
-    --rojo:#9E0C26;
-    --sangre:#C20831;
-    --plomo:rgb(55 65 81 / var(--tw-text-opacity));;
-}
+
 
 *{
     font-family: 'Inter', sans-serif;
@@ -196,7 +202,7 @@ body{
     position: relative;
 }
 .imagen-seccion img{
-    width: 100%;
+    width: 90%;
     height: auto;
 }
 .contenido{
@@ -300,3 +306,28 @@ footer .grupo-2 small {
 .bu-map span{
     padding: 0;
 }
+
+.masonry-gallery-demo {
+    margin: 0 auto;
+  }
+  
+  .masonry-gallery-demo::after {
+    content: '';
+    display: flex;
+  }
+  
+  .masonry-gallery-demo .grid-sizer,
+  .masonry-gallery-demo .lg-item {
+    width: 33.33%;
+  }
+  
+  .masonry-gallery-demo .lg-item {
+    float: left;
+    margin-bottom: 10px;
+  }
+  
+  .masonry-gallery-demo .lg-item img {
+    display: block;
+    max-width: 100%;
+  }
+  

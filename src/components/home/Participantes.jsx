@@ -1,43 +1,46 @@
-import desarrolloAgrario from "../../assets/images/logos/desarrollo_agrario.png";
-import desarrolloEconomico from "../../assets/images/logos/desarrollo_economico.png";
-import alpacasCusco from "../../assets/images/logos/alpacas_cusco.png";
-import gercetur from "../../assets/images/logos/logoGercetur.png";
-import gerepro from "../../assets/images/logos/gerepro.png";
-import geragri from "../../assets/images/logos/geragri.png";
-import agropecuaria from "../../assets/images/logos/agropecuaria.png";
-import agrorural from "../../assets/images/logos/agrorural.png";
-import senasa from "../../assets/images/logos/senasa.png";
-import escudo from "../../assets/images/logos/escudo.png";
-import inves from "../../assets/images/logos/inves.png";
-import grismpv from "../../assets/images/logos/grismpv.png";
-import unsaac from "../../assets/images/logos/unsaac.png";
-import minpro from "../../assets/images/logos/ministerio_de_la_produccion.png";
 
-import logoChinchero from "../../assets/images/logos/logo_chinchero_png.png";
-import logoUrubamba from "../../assets/images/logos/urubamba.png";
-import logoSedaCusco from "../../assets/images/logos/logo_sedacusco.png";
-import logoCBC from "../../assets/images/logos/cbc.png";
-import logoGuamanPoma from "../../assets/images/logos/logoGuamanpoma.png";
-import LogoCajaCusco from "../../assets/images/logos/logoCajaCusco.png";
-import logoAndes from "../../assets/images/logos/logoLosAndes.png";
-import logoConsorcio from "../../assets/images/logos/consorcio.jpg";
-import logoApdayc from "../../assets/images/logos/logoApdayc.png";
+
+import logoLimatambo from "../../assets/images/logos/logo_limatambo_color.png";
+import logoEconomico from "../../assets/images/logos/logo_economico.jpg";
+
+import logoGore from "../../assets/images/logos/logo_gore_cusco.png";
 import logoGerepro from "../../assets/images/logos/gerepro.png";
 
 const Participantes = () => {
   return (
     <section className="pb-10">
       <div className="flex flex-col items-center">
-        <h2 className="text-primary">Organiza</h2>
-        <div className="flex items-center">
+        <h2 className="text-primary">Organizan:</h2>
+        <div className="flex flex-col md:flex-row md:items-center ">
           <img
-            src={logoChinchero}
+            src={logoLimatambo}
             alt="logo municipalidad distrital de Chinchero"
-            className="w-48 h-auto"
+            className="h-44 object-contain"
+          />
+          <img
+            src={logoEconomico}
+            alt="logo municipalidad distrital de Chinchero"
+            className="h-28 px-2 md:px-0 object-contain"
           />
         </div>
       </div>
-      <div className="w-[85%] mx-auto ">
+
+      <div className="flex flex-col items-center">
+        <h2 className="text-primary">Colaboran:</h2>
+        <div className="flex w-8/12 mx-auto justify-around flex-col md:flex-row md:items-end gap-y-6 ">
+          <img
+            src={logoGore}
+            alt="Logo Gobierno Regional del Cusco"
+            className="h-28 object-contain"
+          />
+          <img
+            src={logoGerepro}
+            alt="Logo Gerencia Regional de Producción"
+            className="h-20 object-contain"
+          />
+        </div>
+      </div>
+      {/* <div className="w-[85%] mx-auto ">
         <h2 className="text-center text-primary">Auspician</h2>
         <div className="flex flex-col">
           <div className="flex justify-around gap-1 lg:gap-24">
@@ -80,7 +83,7 @@ const Participantes = () => {
             <img src={logoConsorcio} alt="" className="w-5/6 sm:w-1/3" />
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

@@ -4,12 +4,12 @@ import { Link, useLocation } from "react-router-dom";
 import { HiHome } from "react-icons/hi";
 import { Map } from "./Map";
 import slogan from "../../assets/images/logos/logo_gore_cusco_blanco.png";
-import logoChincheroBlanco from "../../assets/images/logos/logo_muni_chinchero_blanco.png";
+import logoLimatambo from "../../assets/images/logos/logo_limatambo.png";
 import useScreenSize from "../../hooks/useScreenSize";
 const customNavbar = {
   root: {
     inner: {
-      base: "mx-auto flex flex-wrap items-center justify-between",
+      base: "mx-auto flex flex-wrap items-center justify-center md:justify-between",
       fluid: {
         on: "",
         off: "container",
@@ -24,14 +24,27 @@ const customNavbar = {
       off: "",
     },
   },
+  toggle: {
+    base: "inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100  dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 md:hidden",
+    icon: "h-6 w-6 shrink-0",
+  },
 };
 
 function NavbarFB() {
   const isScreenLarge = useScreenSize();
 
+  const [isToggled, setIsToggled] = useState(false);
+
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
+  const handleToggle = () => {
+    setIsToggled(!isToggled);
+  };
+
+  const closeToggle = () => {
+    setIsToggled(false);
+  };
   const isActive = (path) => location.pathname === path;
 
   useEffect(() => {
@@ -54,24 +67,31 @@ function NavbarFB() {
       hidden={isActive("/") && isScreenLarge}
       theme={customNavbar}
       fluid
-      className={`bg-black-40 text-white md:bg-black-40 ${!isActive('/') && "md:bg-primary"} z-100 xl:px-16 fixed z-50 w-full md:py-2 h-fit ${
-        scrolled ? "md:bg-primary text-white" : "md:text-white"
+      className={`bg-black-80 text-white md:bg-black-40 ${
+        !isActive("/") && "md:bg-primary"
+      } z-100 xl:px-16  z-50 w-full py-1 md:py-2 h-fit ${
+        scrolled
+          ? "md:bg-primary text-white fixed bg-black-40"
+          : "md:text-white"
       }`}
     >
-      <Navbar.Brand as={Link} href="/">
+      {/* <Navbar.Brand as={Link} href="/">
         <img
           src={slogan}
           className="mr-6 h-10 sm:h-20"
           alt="Flowbite React Logo"
         />
         <img
-          src={logoChincheroBlanco}
+          src={logoLimatambo}
           className="mr-3 h-10 sm:h-16"
           alt="Flowbite React Logo"
         />
-      </Navbar.Brand>
-      <Navbar.Toggle className="text-white hover:bg-transparent" />
-      <Navbar.Collapse className="">
+      </Navbar.Brand> */}
+      <Navbar.Toggle
+        className="text-white hover:bg-transparent"
+        onClick={handleToggle}
+      />
+      <Navbar.Collapse className={isToggled ? "block" : "hidden"}>
         <>
           <div className={`font-bold md:text-lg flex justify-center`}>
             <Link
@@ -79,6 +99,7 @@ function NavbarFB() {
               className={`px-2 ${
                 isActive("/") ? "border-b-4 " : "hover:border-b-4 "
               } ${scrolled ? "border-white" : "md:border-white"}`}
+              onClick={closeToggle}
             >
               INICIO
             </Link>
@@ -89,13 +110,13 @@ function NavbarFB() {
               className={`px-2 ${
                 isActive("/nosotros") ? "border-b-4 " : "hover:border-b-4 "
               } ${scrolled ? "border-white" : "md:border-white"}`}
+              onClick={closeToggle}
             >
               NOSOTROS
             </Link>
           </div>
-          
 
-          <div className={`font-bold md:text-lg flex justify-center`}>
+          {/* <div className={`font-bold md:text-lg flex justify-center`}>
             <Link
               to="/programa"
               className={`px-2 ${
@@ -104,13 +125,14 @@ function NavbarFB() {
             >
               PROGRAMA
             </Link>
-          </div>
+          </div> */}
           <div className={`font-bold md:text-lg flex justify-center`}>
             <Link
               to="/reglamento"
               className={`px-2 ${
                 isActive("/reglamento") ? "border-b-4 " : "hover:border-b-4 "
               } ${scrolled ? "border-white" : "md:border-white"}`}
+              onClick={closeToggle}
             >
               REGLAMENTO
             </Link>
@@ -122,15 +144,11 @@ function NavbarFB() {
               className={`px-2 ${
                 isActive("/ubicacion") ? "border-b-4 " : "hover:border-b-4 "
               } ${scrolled ? "border-white" : "md:border-white"}`}
+              onClick={closeToggle}
             >
               UBICACIÓN
             </Link>
           </div>
-          <li class="sm:ml-auto flex-1 flex justify-center">
-                    <a href="http://registroferiachinchero.actividadescusco.com/" class="block sm:w-auto bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-                      REGISTRATE
-                    </a>
-          </li>
 
           {/* <div className={`font-bold md:text-lg flex justify-center`}>
             <Map />

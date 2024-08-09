@@ -6,15 +6,15 @@ import Resena from "./home/Resena";
 import { FaChevronCircleUp } from "react-icons/fa";
 
 import slogan from "../assets/images/logos/logo_gore_cusco_blanco.png";
-import logoFao from "../assets/images/logos/fao.png";
-import logoMuniChinchero from "../assets/images/logos/logo_muni_chinchero_blanco.png";
+import logoLimatambo from "../assets/images/logos/logo_limatambo.png";
 import fondoCamelidos from "../assets/images/camelidos/fondo_festicamelidos.png";
 import fondoCamelidosMobile from "../assets/images/camelidos/fondo-camelidos-mobile.png";
 import PromocionVideo from "./home/PromocionVideo";
 import Noticias from "./home/Noticias";
-import Participantes from "./home/Participantes";
-import video_chinchero from "../assets/videos/video_chinchero.mp4";
 import useScreenSize from "../hooks/useScreenSize";
+
+import videoPromocion from "../assets/videos/video-promocion.mp4";
+
 const Home = () => {
   useScrollTop();
   const [backgroundImage, setBackgroundImage] = useState(fondoCamelidos);
@@ -36,25 +36,33 @@ const Home = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth', // Para un efecto de desplazamiento suave
+      behavior: "smooth", // Para un efecto de desplazamiento suave
     });
   };
 
   return (
     <>
-      <div className="w-full min-h-[200px] sm:h-[600px] md:h-[530px] lg:h-[105vh] relative">
+      <div className="w-full min-h-[180px] sm:h-[380px] md:h-[400px] xl:h-[110vh] relative">
+        
         <video
-          className="w-full h-full object-cover object-bottom absolute md:mt-0"
+          className="w-full h-full object-contain sm:object-cover object-bottom absolute md:mt-0"
+          src={videoPromocion}
           autoPlay
           loop
           muted
+        ></video>{" "}
+        <div
+          className={`absolute w-1/4 h-full bg-black-40 flex ${
+            !isScreenLarge && "hidden"
+          }`}
         >
-          <source src={video_chinchero} type="video/mp4" />
-        </video>
-        <div className={`absolute w-1/4 h-full bg-black-40 flex ${!isScreenLarge && "hidden"}`}>
           <div className="flex flex-col h-full py-[2rem] justify-between">
             <div className="flex-1 flex justify-center">
-              <img src={slogan} alt="logo slogan" className="w-2/3 object-contain" />
+              <img
+                src={slogan}
+                alt="logo slogan"
+                className="w-2/3 object-contain"
+              />
             </div>
             <div className="flex-1 flex pl-8 md:pl-12 xl:pl-24">
               <div className="text-base sm:text-xl font-bold text-white">
@@ -69,27 +77,20 @@ const Home = () => {
                   <li>
                     {/* <a href="/programa">PROGRAMA</a> */}
                     <Link to="/programa">PROGRAMA</Link>
-
                   </li>
                   <li>
                     {/* <a href="/programa">PROGRAMA</a> */}
                     <Link to="/reglamento">REGLAMENTO</Link>
-
                   </li>
                   <li>
                     <Link to="/ubicacion">UBICACION</Link>
-                  </li>
-                  <li class="sm:ml-auto">
-                    <a href="http://registroferiachinchero.actividadescusco.com/" class="block sm:w-auto bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-                      REGISTRATE
-                    </a>
                   </li>
                 </ul>
               </div>
             </div>
             <div className="flex-1 flex justify-center">
               <img
-                src={logoMuniChinchero}
+                src={logoLimatambo}
                 alt="logo muni chinchero"
                 className="w-5/6 object-contain"
               />
@@ -102,19 +103,19 @@ const Home = () => {
       <PromocionVideo />
       <Noticias />
       <div>
-      <button
-        onClick={scrollToTop}
-        style={{
-          position: 'fixed',
-          bottom: '20px',
-          right: '20px',
-          cursor: 'pointer',
-          zIndex: 50,
-        }}
-      >
-        <FaChevronCircleUp className="text-blue-700 h-16 w-16"/>
-      </button>
-    </div>
+        <button
+          onClick={scrollToTop}
+          style={{
+            position: "fixed",
+            bottom: "20px",
+            right: "20px",
+            cursor: "pointer",
+            zIndex: 50,
+          }}
+        >
+          <FaChevronCircleUp className="text-blue-700 h-16 w-16" />
+        </button>
+      </div>
     </>
   );
 };
